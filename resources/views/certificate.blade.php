@@ -14,60 +14,64 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background-image:url('https://sertifikatlms.kemkes.go.id/assets/images/bg-sertifonline.png');
-    background-repeat:no-repeat;
-    background-size:cover;
-    min-height:100vh;
-    padding:18px;
-}
+body {
+          font-family: Arial, sans-serif;
+          /*background-color: #f8f9fa;*/
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background-image: url("https://sertifikatlms.kemkes.go.id/assets/images/bg-sertifonline.png");
 
-.certificate-container1{
-    width:95%;
-    max-width:1600px;
-    margin:auto;
-    background:#fff;
-    padding:18px;
-    border-radius:8px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+      }
+
+.certificate-container1 {
+  background-color: white;
+/*          border: 2px solid #00b0b9;*/
+border-radius: 10px;
+padding: 20px;
+/*          max-width: 800px;*/
+width: 95%;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-container{
     border:2px solid #12B7BE;
-    border-radius:8px;
+    border-radius:5px;
     background:#fff;
 }
 
 .certificate-header{
-    text-align:center;
-    padding-top:25px;
+    text-align: center;
+  color: #00b0b9;
+  margin-bottom: 20px;
 }
 
 .certificate-header h1{
-    color:#12B7BE;
-    font-size:42px;
-    font-weight:700;
-    margin-bottom:5px;
+    font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .certificate-header h2{
-    color:#12B7BE;
-    font-size:24px;
-    font-weight:400;
-    margin-bottom:10px;
+    font-size: 24px;
+  font-weight: normal;
+  margin-top: 5px;
 }
 
-.certificate-code{
-    color:#777;
-    font-size:13px;
+.certificate-header .certificate-code {
+  font-size: 14px;
+  color: gray;
+  margin-top: 10px;
 }
 
 .certificate-body{
-    padding:70px 150px 50px 150px;
-    color:#444;
-    font-size:14px;
-    line-height:1.8;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 10%;
+  margin-top: 5%;
 }
 
 .section-title{
@@ -81,15 +85,27 @@ body{
 
 /* ===== IDENTITAS PESERTA ===== */
 .section-title{
-    padding-left:80px;
+     color: #333;
+  line-height: 1.6;
+  padding: 0 10%;
+  margin-top: 5%;
 }
 
 .recipient-info{
-    padding-left:80px;
+    padding: 0 10%;
+    margin-bottom: 5%;
+      margin-top: -10px;
 }
 
+.certificate-body p {
+  margin-bottom: 10px;
+}
+
+.recipient-info p {
+  margin-bottom: 10px;
+}
 .nama-section{
-    margin-bottom:32px;
+    margin-bottom:15px;
 }
 
 .row-dua{
@@ -102,12 +118,12 @@ body{
 
 .profesi-section{
     margin-left:150px;
-    width:150px;
+    width:200px;
 }
 
 .label{
     display:block;
-    font-size:14px;
+    font-size:16px;
     font-weight:700;
     color:#222;
     margin-bottom:3px;
@@ -115,7 +131,7 @@ body{
 
 .value{
     display:block;
-    font-size:14px;
+    font-size:16px;
     color:#333;
 }
 
@@ -123,7 +139,7 @@ body{
 
 .certificate-text{
     margin-top:30px;
-    margin-bottom:25px;
+    margin-bottom:20px;
     text-align:left;
     line-height:1.9;
 }
@@ -135,15 +151,14 @@ body{
 }
 
 .header-list{
-    background:#E8F8F8;
-    padding:12px;
-    font-weight:700;
-    margin-top:-10px;
+    padding: 10px;
+    background-color: #e8fafa;
 }
 
 .course-list ul{
-    list-style:none;
-    padding:14px 0 0;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 .course-list li{
@@ -151,39 +166,14 @@ body{
     color:#222;
 }
 
-/* ===== MOBILE ===== */
-
-@media(max-width:768px){
-
-    body{
-        padding:10px;
-    }
-
-    .certificate-body{
-        padding:20px;
-    }
-
-    .certificate-header h1{
-        font-size:30px;
-    }
-
-    .certificate-header h2{
-        font-size:20px;
-    }
-
-    .row-dua{
-        flex-direction:column;
-    }
-
-    .nik-section,
-    .profesi-section{
-        width:100%;
-        margin-left:0;
-    }
-
-    .profesi-section{
-        margin-top:15px;
-    }
+/* Responsiveness for Mobile */
+@media (max-width: 600px) {
+  .recipient-info {
+    flex-direction: column;
+}
+.recipient-info div {
+    width: 100%;
+}
 
 }
 
@@ -209,7 +199,6 @@ body{
 </div>
 
 <div class="certificate-body">
-
 <div class="section-title">
 <span class="highlight">Diberikan kepada:</span>
 </div>
